@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <!-- <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/difference-between-html-and-html5-768x478.png" /> -->
+      <ion-card-subtitle>Journey</ion-card-subtitle>
+      <ion-card-title>About Me</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Ahsan
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <!-- <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/difference-between-html-and-html5-768x478.png" /> -->
+      <ion-card-subtitle>Contact</ion-card-subtitle>
+      <ion-card-title>Reach me</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">From Email</ion-label>
+        <ion-input type="email" name="email" [(ngModel)]="contact.from"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Subject</ion-label>
+        <ion-input type="text" name="subject" [(ngModel)]="contact.subject"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Message</ion-label>
+        <ion-textarea type="text" name="message" [(ngModel)]="contact.message"></ion-textarea>
+      </ion-item>
+      <ion-button type="button" (click)="onSend()" expand="block">Send</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  
+</ion-content>

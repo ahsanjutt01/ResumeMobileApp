@@ -1,0 +1,13 @@
+{
+  "appId": "com.public-figure.ahsan-personal-app",
+  "appName": "personalApp",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

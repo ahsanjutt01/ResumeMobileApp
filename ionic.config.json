@@ -1,5 +1,7 @@
 {
   "name": "personalApp",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

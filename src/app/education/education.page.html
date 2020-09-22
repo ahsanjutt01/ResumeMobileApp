@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Education</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <span *ngIf="education.length > 0">
+    <ion-card *ngFor="let edu of education">
+      <ion-card-header>
+        <!-- <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2017/03/difference-between-html-and-html5-768x478.png" /> -->
+        <ion-card-subtitle>{{edu.degreeType}}</ion-card-subtitle>
+        <ion-card-title>{{edu.degreeTitle}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{edu.uniName}} {{edu.to | date: 'yyyy' }}-{{edu.from | date: 'yyyy'}}
+        
+      </ion-card-content>
+    </ion-card>
+  </span>
+</ion-content>
