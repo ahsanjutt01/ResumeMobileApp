@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      {{profile.firstName + ' ' + profile.lastName}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="profile.firstName.length > 0" [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title>User Name</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <img src="{{profile.imageUrl}}"
+          style="height: 150px; width: 150px; border-radius: 50%;" />
+        </div>
+        <!-- <img src="https://blog-c7ff.kxcdn.com/blog/wp-content/uploads/2015/11/blog_dev-01-1.jpg" /> -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-center">
+          <h1>Hi, I am {{profile.firstName + ' ' + profile.lastName}}</h1>
+          <h5>{{profile.title}}</h5>
+          <p>{{profile.email + ' ' + profile.phone}}</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="profile.skills.length > 0">
+      <ion-col>
+        <div class="ion-text-center">
+          <h1>Skills</h1>
+          <ion-list>
+            <ion-item *ngFor="let skill of profile.skills">
+              <ion-label>{{skill.title}}</ion-label>
+              <circle-progress
+                  [percent]="skill.expertiesLevel"
+                  [radius]="50"
+                  [outerStrokeWidth]="12"
+                  [innerStrokeWidth]="6"
+                  [outerStrokeColor]="'#78C000'"
+                  [innerStrokeColor]="'#C7E596'"
+                  [animation]="true"
+                  [animationDuration]="300"
+                ></circle-progress>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-card>
+    <img src="https://blog-c7ff.kxcdn.com/blog/wp-content/uploads/2015/11/blog_dev-01-1.jpg" />
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card> -->
+</ion-content>
+
+

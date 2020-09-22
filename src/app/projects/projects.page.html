@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Projects</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="projects.length > 0">
+  <ion-card *ngFor='let project of projects'>
+    <ion-card-header>
+      <img src="{{project.imageUrl}}" style="height:150px" />
+      <!-- <ion-card-subtitle></ion-card-subtitle> -->
+      <ion-card-title>{{project.title}}</ion-card-title>
+    </ion-card-header>
+  
+    <!-- <ion-card-content>
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content> -->
+  </ion-card>
+  
+  
+</ion-content>

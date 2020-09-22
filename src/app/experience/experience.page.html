@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Experience</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="works.length > 0">
+  <ion-card *ngFor="let work of works">
+    <ion-card-header>
+      <ion-card-subtitle>{{work.companyTitle}}, {{work.to | date: 'LLL:yyyy' }} to 
+        {{work.isCurrentlyWorking ? 'Currently working': work.from | date: 'LLL:yyyy' }}
+      </ion-card-subtitle>
+      <ion-card-title>{{work.title}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{work.description}}
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>
